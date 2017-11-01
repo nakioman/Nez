@@ -95,10 +95,9 @@ namespace Nez
 
 
 		#if !FNA
-		protected override bool OnApply()
+		protected override void OnApply()
 		{
 			_timeParam.SetValue( Time.time );
-			return false;
 		}
 		#else
 		protected override void OnApply()

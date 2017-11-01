@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Ionic.Zlib;
 using Microsoft.Xna.Framework.Content.Pipeline;
 using System.ComponentModel;
+using System.IO.Compression;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using Microsoft.Xna.Framework;
 using Nez.TextureAtlasGenerator;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Utilities;
 using Nez.PipelineImporter;
+using CompressionMode = System.IO.Compression.CompressionMode;
 
 
 namespace Nez.TiledMaps
@@ -143,7 +145,7 @@ namespace Nez.TiledMaps
 				return new GZipStream( memoryStream, CompressionMode.Decompress );
 
 			if( compressionMode == "zlib" )
-				return new ZlibStream( memoryStream, CompressionMode.Decompress );
+				return new ZlibStream( memoryStream, MonoGame.Utilities.CompressionMode.Decompress );
 
 			return memoryStream;
 		}

@@ -2,8 +2,8 @@
 using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using System.IO;
-using Ionic.Zlib;
 using System.Collections.Generic;
+using System.IO.Compression;
 using Microsoft.Xna.Framework.Graphics;
 using Nez.Particles;
 using Microsoft.Xna.Framework.Content.Pipeline.Processors;
